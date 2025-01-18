@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InfoQuest Web App</title>
+</head>
+<body>
+    <h1>Query the Document Database</h1>
+    <form method="POST" action="/query">
+        <label for="query">Enter your query:</label>
+        <input type="text" id="query" name="query" required>
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if query %}
+        <h2>Your Query: "{{ query }}"</h2>
+        <h3>Relevant Documents:</h3>
+        <ul>
+            {% for doc in results %}
+                <li>
+                    <strong>{{ doc.title }}</strong><br>
+                    <p>{{ doc.text }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+
+        <h3>Answer:</h3>
+        <p>{{ answer }}</p>
+    {% endif %}
+</body>
+</html>
