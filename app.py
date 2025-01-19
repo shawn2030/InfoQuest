@@ -6,11 +6,14 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 import torch
 from sentence_transformers import SentenceTransformer
 import os
-os.environ["OMP_NUM_THREADS"] = "1"
-os.environ["MKL_NUM_THREADS"] = "1"
-os.environ["NUMEXPR_NUM_THREADS"] = "1"
-os.environ["VECLIB_MAXIMUM_THREADS"] = "1"
-os.environ["OPENBLAS_NUM_THREADS"] = "1"
+
+# Since i am working on cpu i assigned only 1 thread to all the libraries
+# Uncomment the below lines if you are working on gpu
+# os.environ["OMP_NUM_THREADS"] = "1"
+# os.environ["MKL_NUM_THREADS"] = "1"
+# os.environ["NUMEXPR_NUM_THREADS"] = "1"
+# os.environ["VECLIB_MAXIMUM_THREADS"] = "1"
+# os.environ["OPENBLAS_NUM_THREADS"] = "1"
 
 
 app = Flask(__name__)
