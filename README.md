@@ -4,7 +4,7 @@
 This project implements a robust Retrieval-Augmented Generation (RAG) system using MongoDB, FAISS (Facebook AI Similarity Search), and language models. It is designed to efficiently store, retrieve, and generate contextually relevant answers based on a large corpus of documents. Below is a detailed description of the functionalities provided by the implementation and Web-app interface:
 
 ![Page 1](1.png)
-![Page 2](1.png)
+![Page 2](2.png)
 
 
 # Key Components
