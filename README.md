@@ -14,6 +14,7 @@ The project begins by processing a dataset of textual documents and storing them
 Dataset Loading: Documents are loaded from a CSV file, which contains textual content along with optional metadata such as titles or IDs.
 Embedding Generation: Each document is processed using the lightweight all-MiniLM-L6-v2 transformer model to compute high-quality semantic embeddings.
 MongoDB Integration: The processed data, including document content, metadata, and embeddings, is stored in MongoDB for persistent storage and retrieval.
+
 2. Semantic Search and Query Handling
 A Flask-based web application provides a user interface for querying the stored documents and retrieving contextually relevant results. This system leverages FAISS for efficient similarity searches and GPT-Neo for generating contextually relevant responses.
 
